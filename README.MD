@@ -4,7 +4,7 @@ This repository serves the following purpose
 
 Highlevel workflow
 - F5 BIGIP have BGP peering through Zebos (manage via imish command)
-- script bgproutedumper.sh runs periodically, doing this stuff
+- script bgproutedumper.sh runs periodically (triggered by bigip icall), doing this stuff
   1. copy current route list (route.current) to previous route list (route.prev)
   2. fill (route.current) with new information from recent received BGP prefixes
   3. compare (route.current) with (route.prev). If there is delta, update external datagroup. Otherwise, do nothing.
