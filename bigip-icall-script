@@ -1,0 +1,8 @@
+sys icall script bgproutedumper {
+    app-service none
+    definition {
+        exec /config/bgproutedumper.sh
+    }
+    description none
+    events none
+}
